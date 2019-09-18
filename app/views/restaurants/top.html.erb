@@ -1,0 +1,9 @@
+
+<h1>Best restos</h1>
+
+<% @best_restos.each do |r| %>
+<p><%= r.name%></p>
+<%= r.address %>
+<%= r.stars %>
+
+<% end %>
