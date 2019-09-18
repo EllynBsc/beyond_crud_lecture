@@ -33,9 +33,9 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new(restaurant_params)
 
     if @restaurant.save
-      redirect_to @restaurant, notice: 'Restaurant was successfully created.'
+      redirect_to restaurant_path(@restaurant), notice "resto created"
     else
-      render :new
+       render :new #(rendering a view)
     end
   end
 
